@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fitur.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* .switcher */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e3edf7;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill {
+            width: 160px;
+            height: 160px;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .outer {
+            height: 160px;
+            width: 160px;
+            padding: 19px;
+            box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.5), 6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+        }
+
+        .inner {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        #number {
+            font-weight: 600;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="tambah">tambah chart</button><br>
+
+    <button id="tambah2">tambah</button>
+
+
+    <p id="baru"></p>
+
+    <div class="skill">
+        <div class="outer">
+            <div class="inner">
+                <div id="number">
+                    65%
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sweet = document.querySelector("#tambah2");
+        sweet.addEventListener("click", (e) => {
+
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
+
+
+        const tambahChart = document.querySelector("#tambah");
+
+        tambah.addEventListener("click", function () {
+
+            const chtBaru = document.querySelector("p");
+            const liBaru = document.createElement('div');
+            liBaru.classList.add("pie");
+            liBaru.classList.add("animate");
+            liBaru.style = "--p:70; c:skyblue;"
+            const tekLiBaru = document.createTextNode('contoh');
+
+            liBaru.appendChild(tekLiBaru);
+            chtBaru.appendChild(liBaru)
+
+        })
+
+
+    </script>
+</body>
+
+</html>

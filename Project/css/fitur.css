@@ -1,0 +1,229 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'K2D', sans-serif;
+}
+
+#first {
+    background-image: url('../img/bg3.jpg');
+    background-size: 1440px 728px;
+    background-position: center;
+}
+
+.k {
+    color: #E5E758;
+}
+
+/* Navbar code */
+nav {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    font-family: 'K2D', sans-serif;
+    /* top: 0px; */
+    background: #3F3D56;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.nav-wrap {
+    width: 1440px;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 10px;
+    align-items: center;
+}
+
+.scroll {
+    background-color: #3F3D56;
+    transition: 0.5s;
+    height: 75px;
+    border-radius: 50px;
+    margin: 20px;
+    width: 97%;
+
+}
+
+.nav-image img {
+    height: 48px;
+    position: relative;
+    float: left;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.nav-brand a {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.nav-tab {
+    margin-top: 5px;
+    margin-right: 20px;
+    position: relative;
+    float: right;
+    display: flex;
+    padding: 10px;
+}
+
+.nav-tab a {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+/* Tagline */
+.tagline {
+    color: white;
+    text-align: center;
+    height: 650px;
+    padding-top: 520px;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
+
+.pie {
+    --p: 20;
+    --b: 22px;
+    --c: #3F3D56;
+    --w: 150px;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+        conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+    animation: p 1s .5s both;
+}
+
+@keyframes p {
+    from {
+        --p: 0
+    }
+}
+
+body {
+    background: #ddd;
+}
+
+
+#baru {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 100px;
+}
+
+.data {
+    height: 640px;
+}
+
+.data .kumpulan-crd {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.data h1 {
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+.data .crd {
+    display: block;
+    border-radius: 35px;
+    width: 220px;
+    height: 270px;
+    background-color: #E5E758;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 27px;
+}
+
+.data .crd img {
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    width: 300px;
+    height: 250px;
+}
+
+.data .crd .caps {
+    padding: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #3F3D56;
+}
+.judul-deskripsi {
+    padding-top:80px;
+}
+.judul-deskripsi #judul {
+    background-color: #3F3D56;
+    border-radius: 30px;
+    margin-left: 50px;
+    width: 200px;
+    height: 55px;
+    color: white;   
+    text-align: center;
+}
+#judul {
+    padding: 10px;
+}
+
+#deskripsi {
+    color: #3F3D56;
+    font-size: 25pt;
+    text-align: justify;
+    width: 600px;
+    margin-left: 50px;
+    
+}
